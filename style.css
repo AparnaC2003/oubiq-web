@@ -1,0 +1,488 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+/* animations applied in the website */
+
+/* animation for down to up movement */
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform:translateY(50px) ;
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* animation for appearing in the original place */
+@keyframes Appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* animation from left to right */
+@keyframes Left-Right{
+    from{
+        opacity: 1;
+        transform:translateX(-50px) ;
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0px) ; 
+    }
+
+}
+
+/* animation from right to left */
+@keyframes Right-Left{
+    from{
+        opacity: 1;
+        transform:translateX(50px) ;
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0px) ; 
+    }
+
+}
+
+/* small to big with a bounce */
+@keyframes SmallToBig{
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05); /* slightly bigger than normal */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* navigation bar */
+#navbar{
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    padding: 0px 150px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+#navbar img{
+    height: 63px;
+    left: 150px;
+    position: fixed;
+}
+#unlist{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    right: 150px;
+}
+.item{
+    margin: 0px 20px;
+    list-style: none;
+    
+}
+.item a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.item a:hover{
+    text-decoration: underline;
+}
+
+
+.main{
+    width: 100%;
+    height: 650px;
+    /* background-color: rgb(216, 215, 250); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 110px;
+}
+.bigfont{
+    font-weight: bold;
+    font-size: 4.5rem;
+    color: rgb(1, 19, 87);
+}
+.para{
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    width: 352px;
+}
+.btn{
+    
+    padding: 15px 55px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(1, 19, 87);
+    border-radius: 5px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.butn{
+    padding: 15px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(168, 6, 173);
+    border-radius: 5px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(33, 160, 211);
+}
+.butn:hover{
+    background-color: rgb(130, 19, 147);
+}
+#main-img img{
+    width: 500px;
+}
+.sub{
+    /* background-color: aqua; */
+    background:url('img/whitebg.avif')no-repeat center center/cover;
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 430px;
+}
+.parabox{
+    line-height: 1.6;
+    word-spacing: 3px;
+}
+
+/* our approach */
+.sub1{
+    background-color: rgb(1, 19, 87);
+    height: 620px;
+}
+.subheading{
+    color: white;
+    font-size: 53px;
+    text-align: center;
+    margin: 10px;
+    padding: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards; /*heading animation*/
+}
+.items-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: 1200px;
+    height: 300px;
+    margin: 35px auto;
+    gap: 40px;
+    text-align:justify;
+    color: white;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+.mediumhead{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0px;
+    color: white;
+}
+.items p{
+    font-size: 1.04rem;
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: 350;
+}
+.icons{
+    width: 60px;
+    height: 60px;
+}
+
+
+/* items animation */
+.items:nth-child(1){
+    animation-delay: 0.8s;
+}
+.items:nth-child(2){
+    animation-delay: 1.6s;
+}
+.items:nth-child(3){
+    animation-delay: 2.4s;
+}
+.items:nth-child(4){
+    animation-delay: 3.2s;
+}
+
+/* sub 2 -feaured services */
+.sub2{
+    height: 750px;
+    background: url(img/whitebg.avif) no-repeat center center/cover;
+    z-index: -1;
+}
+.card-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+}
+.sub2heading{
+    color: rgb(1, 19, 87);
+    font-size: 53px;
+    text-align: center;
+    margin: 10px;
+    padding: 40px;
+    font-weight:bold;
+}
+.card-list .card-items{
+    width: 300px;
+    height: 370px ;
+    padding: 35px;
+    background: white;
+    box-shadow: 0px 20px 20px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.slide-icons{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+.card-heading{
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.tick-list{
+    color: #222;
+    list-style: none;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: left;
+}
+.tick-list li{
+    margin: 10px 0px;
+}
+.tick-list li::before{
+    content: "✔";
+    color: green;
+    margin-right: 10px;
+}
+
+/* why chhose us ? */
+.sub3{
+    height: 1125px;
+    background: rgb(1, 19, 87);
+}
+.sub3heading{
+    color: white;
+    font-size: 53px;
+    text-align: center;
+    margin: 10px;
+    padding: 40px;
+    font-weight: bold;
+    animation: Appear 3s ease forwards;
+
+}
+.small-box-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    width: 1200px;
+    height: 900px;
+    margin: auto;
+}
+/* animation applyingg to each small box */
+
+.small-box:nth-child(1){
+    animation: Left-Right 3s ease forwards;
+}
+.small-box:nth-child(2){
+    animation: Right-Left 3s ease forwards;
+}
+.small-box:nth-child(3){
+    animation: Left-Right 3s ease forwards;
+}
+.small-box:nth-child(4){
+    animation: Right-Left 3s ease forwards;
+}
+.small-box:nth-child(3){
+    animation: Left-Right 3s ease forwards;
+}
+
+
+.small-box{
+    background: rgba(255, 255, 255, 0.1);
+    width: 1200px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 15px;
+}
+.small-box p{
+    color: #ccc;
+    font-size: 1.1rem;
+    font-weight: 350;
+    word-spacing:1px;
+    flex-grow: 1;
+}
+.upper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.upper h4{
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/* footer */
+footer{
+    height: 410px;
+}
+.foot{
+    height: 280px;
+    display: flex;
+}
+.left, .right {
+    flex: 1;                 /* Equal width halves */
+    display: flex;           
+    justify-content: center; /* Center text horizontally */
+    height: 280px;
+}
+.L1{
+    width: 300px;
+    height: 170px;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    animation: SmallToBig 1.2s ease-out forwards;
+}
+.L1 h3{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.L1 p{
+    font-size: 18px;
+    line-height: 1.2em;
+    word-spacing: 0.5em;
+    font-family: 500;
+}
+.L1 p a{
+    color: black;
+}
+
+.right-box{
+    width: 600px;
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    animation: SmallToBig 1.2s ease-out forwards;
+}
+.right-box h3{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+#mail-form{
+    display: flex;
+    flex-direction: column;
+}
+#mail-form label{
+    font-size: 18px;
+    font-family: 450;
+}
+#mail-form input{
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid red;
+    font: 10px;
+    width: 500px;
+}
+#mail-form button{
+    width: 120px;
+    height: 40px;
+    background: rgb(1, 19, 87);
+    color: white;
+    font-family: bold;
+    border-radius: 7px;
+    border: none;
+}
+#mail-form button:hover{
+    background: rgb(29, 30, 32);
+    cursor: pointer;
+}
+.brand{
+    width:100px ;
+    height: 90px;
+    margin-left:90px ;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    animation: SmallToBig 1.2s ease-out forwards;
+}
+.brand a i{
+    font-size: 25px;
+    color: black;
+}
+.brand a i:hover{
+    color: #222;
+}
+#copy{
+    display: inline;
+    font-size: 14px;
+    padding: 0px 30px;
+    margin: 40px;
+    animation: SmallToBig 1.2s ease-out forwards;
+}
+
+
+
+
