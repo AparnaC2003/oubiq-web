@@ -257,19 +257,21 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 600px;
+    height: 500px;
+    width: 1100px;
 }
 .sub2heading{
     color: rgb(1, 19, 87);
     font-size: 53px;
     text-align: center;
     margin: 10px;
+    margin-bottom: 30px;
     padding: 40px;
     font-weight:bold;
 }
-.card-list .card-items{
+.card-items{
     width: 300px;
-    height: 370px ;
+    height: 500px ;
     padding: 35px;
     background: white;
     box-shadow: 0px 20px 20px 12px rgba(0, 0, 0, 0.1);
@@ -279,11 +281,16 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-list .card-items:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .slide-icons{
     width: 70px;
     height: 70px;
-    margin: 10px;
+    margin: 0px 103px;
 }
 .card-heading{
     font-size: 1.3rem;
@@ -346,7 +353,7 @@
 .small-box:nth-child(4){
     animation: Right-Left 3s ease forwards;
 }
-.small-box:nth-child(3){
+.small-box:nth-child(5){
     animation: Left-Right 3s ease forwards;
 }
 
@@ -446,13 +453,15 @@ footer{
     width: 500px;
 }
 #mail-form button{
-    width: 120px;
-    height: 40px;
+     width: 120px;
+    height: 50px;
     background: rgb(1, 19, 87);
     color: white;
     font-family: bold;
+    font-size: 1.1rem;
     border-radius: 7px;
     border: none;
+    margin: 20px 200px;
 }
 #mail-form button:hover{
     background: rgb(29, 30, 32);

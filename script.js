@@ -10,14 +10,14 @@ const swiper = new Swiper('.slider-wrapper', {
     DynamicBullets:true
   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  // // Navigation arrows
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
 
   //responsive breakpopints
-  beakpoints: {
+  breakpoints: {
     0:{
         slidesPerView: 1
     },

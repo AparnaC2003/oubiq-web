@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+/* animation part  */
+@keyframes SmallToBig{
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.03); /* slightly bigger than normal */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /* necessary ones */
 .bigfont{
@@ -64,7 +79,7 @@
 
 .body-container{
     /* z-index: -1; */
-    height: 3650px;
+    height: 2550px;
     padding-top: 110px;
 }
 .kick-img-box{
@@ -158,6 +173,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.small-box:hover {
+    transform: translateY(-5px); /* moves box up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* deeper shadow */
 }
 .small-box h4{
     color: #000080;
@@ -176,6 +197,77 @@
     line-height: 2em;
 }
 
+
+/* Enroll now */
+
+.enroll{
+    height: 740px;
+    background-color: #e8e7e7;
+    display: flex;
+}
+.contact{
+    margin-top: 100px;
+    margin-left: 130px;
+    width: 700px;
+    height: 300px;
+    animation: SmallToBig 1s ease forwards;
+    animation-delay: 2s;
+}
+.contact h2{
+    font-size: 2.8rem;
+    color: #030365;
+    margin-bottom: 15px;
+}
+.contact p{
+    font-size: 1.1rem;
+    color: #000080;
+    margin-bottom: 40px;
+}
+.contact span{
+    color: #252424;
+}
+.form-detail{
+    width: 800px;
+    height: 720px;
+    animation: SmallToBig 1s ease forwards; 
+    animation-delay: 2s;
+}
+#forms{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.in-box{
+    width: 530px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #727586;
+    margin-bottom: 20px;
+}
+.checkboxs input{
+    margin: 5px;
+}
+.checkboxs label{
+    font-size: 1.05rem;
+    color: #222;
+    line-height: 2em;
+    font-weight: 500;
+}
+.checkboxs button{
+    width: 120px;
+    height: 50px;
+    background: rgb(1, 19, 87);
+    color: white;
+    font-family: bold;
+    font-size: 1.1rem;
+    border-radius: 7px;
+    border: none;
+    margin: 20px 200px;
+}
+.checkboxs button:hover{
+    background: rgb(29, 30, 32);
+    cursor: pointer;
+}
 
 
 
@@ -202,6 +294,7 @@ footer{
     display: flex;
     flex-direction: column;
     animation: SmallToBig 1.2s ease-out forwards;
+    animation-delay: 3s;
 }
 .L1 h3{
     font-size: 1.6rem;
@@ -224,6 +317,7 @@ footer{
     display: flex;
     flex-direction: column;
     animation: SmallToBig 1.2s ease-out forwards;
+    animation-delay: 3s;
 }
 .right-box h3{
     font-size: 1.6rem;
@@ -246,13 +340,15 @@ footer{
     width: 500px;
 }
 #mail-form button{
-    width: 120px;
-    height: 40px;
+     width: 120px;
+    height: 50px;
     background: rgb(1, 19, 87);
     color: white;
     font-family: bold;
+    font-size: 1.1rem;
     border-radius: 7px;
     border: none;
+    margin: 20px 200px;
 }
 #mail-form button:hover{
     background: rgb(29, 30, 32);
@@ -267,6 +363,7 @@ footer{
     justify-content: center;
     align-items: center;
     animation: SmallToBig 1.2s ease-out forwards;
+    animation-delay: 3s;
 }
 .brand a i{
     font-size: 25px;
@@ -281,4 +378,7 @@ footer{
     padding: 0px 30px;
     margin: 40px;
     animation: SmallToBig 1.2s ease-out forwards;
+    animation-delay: 3s;
 }
+
+
