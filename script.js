@@ -29,3 +29,12 @@ const swiper = new Swiper('.slider-wrapper', {
     }
   }
 });
+
+// code for hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const unlist = document.getElementById('unlist');
+    hamburger.addEventListener('click', function() {
+        unlist.classList.toggle('active');
+    });
+});

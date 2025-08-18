@@ -6,6 +6,7 @@
     <title>Innovative Digital Solutions For Your Business | OBIQUE</title>
     <link rel="stylesheet" href="internship.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="popup.css">
   </head>
   <body>
     <nav id="navbar">
@@ -36,7 +37,7 @@
             Unlock Your Potential with Our Dynamic Internship Programs
           </p>
           <button type="button" class="btn">
-            <a href="contact.html">Enroll Now</a>
+            <a href="#enroll">Enroll Now</a>
           </button>
         </div>
         <div class="image">
@@ -163,7 +164,7 @@
         </div>
       </section>
 
-      <section class="enroll">
+      <section id="enroll">
 
         <div class="contact">
           <h2>Enroll Now</h2>
@@ -193,6 +194,14 @@
             <button type="submit">Submit</button>
             </div>
           </form>
+        </div>
+
+        <!-- popup window -->
+        <div id="popup">
+          <div class="popup-box">
+            <p>Submitted Successfully</p>
+            <button onclick="closepopup()">Close</button>
+          </div>
         </div>
       </section>
     </div>
@@ -248,5 +257,8 @@
         Rights Reserved.
       </p>
     </footer>
+
+    <script src="pop-script.js"></script>
+    
   </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Innovative Digital Solutions For Your Business | OBIQUE</title>
     <link rel="stylesheet" href="contact.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <nav id="navbar">
@@ -22,7 +23,7 @@
         <h2>Get in Touch with <strong>OUBIQ</strong></h2>
         <p>We’re here to help you succeed digitally.</p>
         <div class="form-container">
-            <form action="" class="details">
+            <form action="" id="forms">
                 <label for="name">Your First Name</label>
                 <input type="text" class="in-box" placeholder="Enter your first name" >
 
@@ -34,6 +35,14 @@
 
                 <button type="submit">Submit Your Enquiry</button>
             </form>
+        </div>
+
+        <!-- popup window -->
+        <div id="popup">
+          <div class="popup-box">
+            <p>Submitted Successfully</p>
+            <button onclick="closepopup()">Close</button>
+          </div>
         </div>
     </div>
 
@@ -90,5 +99,6 @@
       </p>
     </footer>
 
+    <script src="pop-script.js"></script>
 </body>
 </html>
