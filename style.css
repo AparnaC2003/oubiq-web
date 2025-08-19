@@ -121,6 +121,13 @@
     align-items: center;
     padding-top: 110px;
 }
+.main-content{
+    animation: SmallToBig 1.2s ease-out forwards;
+    max-width: 450px;
+}
+.main-content span{
+    max-width: 300px;
+}
 .bigfont{
     font-weight: bold;
     font-size: 4.5rem;
@@ -182,12 +189,14 @@
 .parabox{
     line-height: 1.6;
     word-spacing: 3px;
+    max-width: 600px;
+    text-align: justify;
 }
 
 /* our approach */
 .sub1{
     background-color: rgb(1, 19, 87);
-    height: 620px;
+    height: auto;
 }
 .subheading{
     color: white;
@@ -205,9 +214,9 @@
     justify-content: space-evenly;
     margin-top: 40px;
     width: 1200px;
-    height: 300px;
+    height: 350px;
     margin: 35px auto;
-    gap: 40px;
+    gap: 50px;
     text-align:justify;
     color: white;
 }
