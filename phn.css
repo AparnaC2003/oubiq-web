@@ -12,7 +12,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body{
         height: auto;
     }
@@ -150,6 +150,245 @@
     .sub3heading {
         font-size: 2rem;
         padding: 20px 10px;
+    }
+
+    /* Featured services */
+    .sub2{
+        height: 700px;
+    }
+    .card-body {
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+        gap: 20px;
+        align-items: stretch;
+    }
+    .card-items {
+        width: 90%;
+        height: auto;
+        margin: 0 auto 20px auto;
+        padding: 20px;
+    }
+    .slide-icons {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .slider-wrapper{
+        height: 350px;
+        width: 278px;
+        text-align: center;
+    }
+
+    /* Why choose us */
+    .sub3{
+        height: auto;
+    }
+    .small-box-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .small-box {
+        width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .upper h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    .foot {
+        flex-direction: column;
+        height: auto;
+    }
+    .left, .right {
+        height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .L1, .right-box {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+        padding: 10px;
+    }
+    #mail-form input {
+        width: 100%;
+        font-size: 1rem;
+    }
+    #mail-form button {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .brand {
+        width: 100%;
+        margin-left: 0;
+        gap: 20px;
+        justify-content: flex-start;
+        padding: 10px 30px;
+    }
+    #copy {
+        display: block;
+        font-size: 12px;
+        margin: 20px 0;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+
+
+/* Tablet 600px to 1024 */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body{
+        height: auto;
+    }
+    /* Navbar styles */
+    #navbar {
+       flex-direction: column;
+        height: 80px;
+        padding: 10px 20px;
+        position: fixed;
+        box-shadow: none;
+        background-color: white;
+        z-index: 10;
+        top: 0px;   
+    }
+    #navbar img {
+        position: fixed;
+        height: 28px;
+        width: auto;
+        margin-bottom: 10px;
+        left: 25px;
+    }
+    /* Hamburger menu styles */
+    #hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 20;
+    }
+    /* Hide nav links by default */
+    #unlist {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 15;
+        align-items: center;
+        margin-top: 10px;
+    }
+    /* Show nav links when active */
+    #unlist.active {
+        display: flex;
+    }
+    .item {
+        margin: 10px 0;
+    }
+
+
+    /* Main section */
+    .main {
+        flex-direction: column;
+        height: auto;
+        padding-top: 80px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .main-content {
+        max-width: 340px;
+        animation: SmallToBig 1.2s ease-out forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .bigfont {
+        font-size: 3rem;
+        text-align: left;
+    }
+    .para {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        max-width: 300px;
+        line-height: 1.5em;
+        font-weight: 376;
+    }
+    .button {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .btn{
+        padding: 15px 122px;
+    }
+    .butn{
+        padding: 15px 105px;
+    }
+    #main-img img {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px 0;
+    }
+
+    /* Sub section */
+    .sub {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .parabox {
+        padding: 0 10px;
+    }
+
+    /* Our approach */
+    .items-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        margin: 20px auto;
+    }
+    .items {
+        min-width: unset;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .items p{
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+    .subheading,
+    .sub2heading,
+    .sub3heading {
+        font-size: 3rem;
+        padding: 25px 10px;
     }
 
     /* Featured services */
